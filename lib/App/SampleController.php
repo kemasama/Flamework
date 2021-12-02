@@ -13,8 +13,13 @@ class SampleController extends Controller
 
     public function post()
     {
+        global $app;
+
+        $args = $app->getArgments();
+
         return [
-            "message" => "Post"
+            "message" => "Post",
+            "requests" => $args,
         ];
     }
 }

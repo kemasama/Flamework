@@ -2,6 +2,11 @@
 
 namespace System;
 
+/**
+ * Reference
+ *  PHPだけでRESTAPIを再現してみた
+ *  https://qiita.com/guchimina/items/9f351944ddaa33ba73b0
+ */
 class Route implements App
 {
     public function __construct($root)
