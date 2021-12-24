@@ -11,7 +11,16 @@ class ErrorHandle
 {
     public static function showException()
     {
-
+        self::Header();
+    }
+    public static function showGateway()
+    {
+        self::Header();
+        
+        echo json_encode([
+            "error" => true,
+            "message" => "Gateway Error",
+        ]);
     }
 
     public static function showNoResponse()

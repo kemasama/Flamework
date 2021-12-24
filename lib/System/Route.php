@@ -51,6 +51,17 @@ class Route implements App
         $paths = explode('/', $matches[1]);
         $file = array_shift($paths);
 
+        if (empty($file))
+        {
+            if (Gateway::Check())
+            {
+                Gateway::Show();
+            } else {
+                ErrorHandle::showGateway();
+            }
+            exit;
+        }
+
         $this->args = [];
         foreach ($paths as $v)
         {
