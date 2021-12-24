@@ -48,4 +48,4 @@ You can echo, print.
 
 or edit Controller.php (lib/App/Controller.php)
 
-    $origin = "";
+    $this->origin = "";
